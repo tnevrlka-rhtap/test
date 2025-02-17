@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test 
+  description: Secure Supply Chain Example for User Provided Repo   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=test
+    backstage.io/kubernetes-id: test 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: test
+    quay.io/repository-slug: tnevrlka-rhtap/test
+  tags: ["experimental", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 

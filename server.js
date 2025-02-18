@@ -4,6 +4,8 @@ const http = require('http');
 
 Prometheus.collectDefaultMetrics();
 
+// trigger ci
+
 const requestHistogram = new Prometheus.Histogram({
     name: 'http_request_duration_seconds',
     help: 'Duration of HTTP requests in seconds',
